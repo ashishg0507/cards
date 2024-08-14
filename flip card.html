@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h2 {
+            margin: 0 0 10px;
+        }
+
+        .card-content p {
+            margin: 0;
+        }
+
+        .card-details {
+            display: none;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+        }
+
+        .card-details p {
+            margin: 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" onclick="toggleDetails(1)">
+            <div class="card-content">
+                <h2>‘Laughable’: US denies involvement in Bangladesh PM Sheikh Hasina's resignation</h2>
+                <p>Click to see more details...</p>
+            </div>
+            <div class="card-details" id="details-1">
+                <p>Sheikh Hasina resigned and fled to India on August 5 after thousands of demonstrators gathered in Dhaka, demanding the ouster of her government.The United States has strongly rejected allegations that it was involved in the resignation of former Bangladesh prime minister Sheikh Hasina.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(2)">
+            <div class="card-content">
+                <h2>
+                    Ukraine offers to stop incursion if Russia agrees to ‘just peace’</h2>
+                <p>Click to see more details...</p>
+            </div>
+            <div class="card-details" id="details-2">
+                <p>In under a week, Ukrainian forces have captured around 1,000 square kilometers in their surprise offensive into Russia, Kyiv's top commander said on Monday.The amount of Russian territory that Ukraine has seized in a matter of days — roughly 386 square miles — is almost as much as Moscow has captured in Ukraine this year.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(3)">
+            <div class="card-content">
+                <h2>Mauritius FSC reacts to Hindenburg Research's offshore funds allegations against SEBI chief Madhabi Puri Buch</h2>
+                <p>Click to see more details...</p>
+            </div>
+            <div class="card-details" id="details-3">
+                <p>The Financial Services Commission of Mauritius on Tuesday denied the offshore fund allegations against Securities and Exchange Board of India (SEBI) chief Madhabi Puri Buch in the new Hindenburg Research report, saying that the funds are “not domiciled” in the island nation.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(4)">
+            <div class="card-content">
+                <h2>Pakistan Uses Russian UAVs To Spy On India; Developer Says Supercam Drones Witness Massive Demand</h2>
+                <p>Click to see more details...</p>
+            </div>
+            <div class="card-details" id="details-4">
+                <p>
+                    Russia has announced a surge in international interest in its Supercam series of drones, with the country already exporting these advanced unmanned aerial vehicles (UAVs) to several global clients, including Belarus and Pakistan.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(5)">
+            <div class="card-content">
+                <h2>Gold Price Forecast: XAU/USD holds above $2,450 ahead of US CPI data</h2>
+                <p>Click to see more details...</p>
+            </div>
+            <div class="card-details" id="details-5">
+                <p>Gold price (XAU/USD) trades with mild gains near $2,465 during the early Asian session on Wednesday. The upside of the yellow metal might be underpinned by the safe-haven flows amid ongoing tensions in the Middle East. Traders will closely watch the release of the US July Consumer Price Index (CPI), which is due later on Wednesday.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(6)">
+            <div class="card-content">
+                <h2>Stocks To Watch: Vedanta, Vodafone Idea, Happiest Minds Technologies, Asian Paints, Piramal Enterprises</h2>
+                <p>Click to see more details...</p>
+            </div>
+            <div class="card-details" id="details-6">
+                <p>Stocks in Focus: GIFT Nifty traded higher as the index was up 99 points or 0.41% at 24,256 indicating a higher start for domestic indices NSE Nifty 50 and BSE Sensex on Wednesday. Previously, on Tuesday, the NSE Nifty 50 closed the session 208 points or 0.85% lower to settle at 24,139, while the BSE Sensex fell almost 700 points or 0.87% to close at 78,956.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(7)">
+            <div class="card-content">
+                <h2>Japan PM Kishida to step down in September, won't seek re-election: Report
+                </h2>
+                <p>Click to see more details...</p>
+            </div>
+            <div class="card-details" id="details-7">
+                <p>Japanese Prime Minister Fumio Kishida will step down as ruling party leader in September, media reported on Wednesday, ending a three-year term marked by rising prices and marred by political scandals.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(8)">
+            <div class="card-content">
+                <h2>Several airlines extend suspension of flights as Middle East tensions rise; check list</h2>
+                <p>Click to see more details...</p>
+            </div>
+            <div class="card-details" id="details-8">
+                <p>Concerns over a wider conflict in the Middle East have prompted international airlines to suspend flights to the region or to avoid affected air space.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="toggleDetails(9)">
+            <div class="card-content">
+                <h2>After F-15, F-22, F-35 ‘Super Fighters’, U.S. Sends Submarine, CSG Abraham Lincoln To M.East To Fortify Israel</h2>
+                <p>Click to see more details...</p>
+            </div>
+            <div class="card-details" id="details-9">
+                <p>During a conversation with Israel’s Defense Minister Yoav Gallant on August 11, US Secretary of Defense Lloyd J. Austin III emphasized that in light of the escalating tension in the region, the United States is committed to utilizing all available resources to defend Israel. He also highlighted the increased presence and capabilities of the American military throughout the Middle East.</p>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script type="text/javascript">
+        function toggleDetails(cardNumber) {
+            const details = document.getElementById(`details-${cardNumber}`);
+            
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
